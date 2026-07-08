@@ -4,7 +4,7 @@ Submitted by: **Darren Lee**
 
 This web app: **Find the nearest breweries near you! #2 cuz i lost my project data TWICE!**
 
-Time spent: **7** hours spent in total
+Time spent: **7.5** hours spent in total
 
 ## Required Features
 
