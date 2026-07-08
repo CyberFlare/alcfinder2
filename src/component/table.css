@@ -1,0 +1,141 @@
+/* Beer-themed palette */
+:root {
+  --cream: #f8ecd4;
+  --cream-row: #fff8ea;
+  --dark-roast: #3b2410;
+  --caramel: #c9711e;
+  --caramel-soft: #e6a15a;
+  --yellow: #f6c945;
+}
+
+.table-container {
+  margin: 24px 50px 0;
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(59, 36, 16, 0.15);
+}
+
+.brewery-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--dark-roast);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Yellow rounded header */
+.brewery-table thead th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dark-roast);
+  background-color: var(--yellow);
+}
+
+.brewery-table thead th:first-child {
+  border-top-left-radius: 16px;
+}
+
+.brewery-table thead th:last-child {
+  border-top-right-radius: 16px;
+}
+
+/* White rows */
+.brewery-row {
+  background-color: #ffffff;
+}
+
+.brewery-row:not(:last-child) td {
+  border-bottom: 1px solid #f0e9dc;
+}
+
+.brewery-row td {
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+.brewery-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Rounded colored type tag */
+.type-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: var(--caramel-soft);
+  color: var(--dark-roast);
+}
+
+.type-micro { background-color: var(--yellow); }
+.type-nano { background-color: #f4d58d; }
+.type-brewpub { background-color: var(--caramel-soft); }
+.type-taproom { background-color: #d4a373; }
+.type-bar { background-color: #cd9777; color: #fff; }
+.type-regional { background-color: var(--caramel); color: #fff; }
+.type-large { background-color: #a4551a; color: #fff; }
+.type-planning { background-color: #d9cbb2; }
+.type-contract { background-color: #e9c46a; }
+.type-proprietor { background-color: #ddb892; }
+.type-closed { background-color: #b0a89a; color: #fff; }
+
+/* Website button */
+.website-button {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 6px;
+  background-color: var(--caramel);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+
+.website-button:hover {
+  background-color: var(--yellow);
+  color: var(--dark-roast);
+}
+
+/* Responsive: stack into cards on mobile */
+@media (max-width: 640px) {
+  .brewery-table thead {
+    display: none;
+  }
+
+  .brewery-table,
+  .brewery-table tbody,
+  .brewery-row,
+  .brewery-row td {
+    display: block;
+    width: 100%;
+  }
+
+  .brewery-row {
+    padding: 6px 4px;
+  }
+
+  .brewery-row td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+  }
+
+  .brewery-row td::before {
+    content: attr(data-label);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--caramel);
+  }
+}
