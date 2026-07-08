@@ -27,22 +27,10 @@ function App() {
     }
 
     const fetchBreweries = (data) => {
-      const cleanedBreweries = data.map(
-        ({ id, name, brewery_type, city, state, phone, website_url }) => ({
-          id,
-          name,
-          brewery_type,
-          city,
-          state,
-          phone,
-          website_url,
-        })
-      );
-
-      setAllBreweries(cleanedBreweries);
-      countTotalBreweries(cleanedBreweries);
-      findMostCommonType(cleanedBreweries);
-      countBreweriesWithWebsites(cleanedBreweries);
+      setAllBreweries(data);
+      countTotalBreweries(data);
+      findMostCommonType(data);
+      countBreweriesWithWebsites(data);
   };
 
   const countTotalBreweries = (data) => {

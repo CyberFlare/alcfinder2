@@ -17,32 +17,31 @@ function Table({ breweries = [] }) {
         <tbody>
           {breweries.map((brewery) => (
             <tr key={brewery.id} className="brewery-row">
-              <td data-label="Name" className="brewery-name">
+              <td className="brewery-name">
                 {brewery.name}
               </td>
-              <td data-label="Type">
+              <td>
                 <span className={`type-tag type-${brewery.brewery_type}`}>
                   {brewery.brewery_type}
                 </span>
               </td>
-              <td data-label="Location">
+              <td>
                 {[brewery.city, brewery.state].filter(Boolean).join(' / ')}
               </td>
-              <td data-label="Phone">
-                {brewery.phone ? brewery.phone : '—'}
+              <td>
+                {brewery.phone ? brewery.phone : 'n/a'}
               </td>
-              <td data-label="Website">
+              <td>
                 {brewery.website_url ? (
                   <a
                     className="website-button"
                     href={brewery.website_url}
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     Visit
                   </a>
                 ) : (
-                  '—'
+                  'n/a'
                 )}
               </td>
             </tr>

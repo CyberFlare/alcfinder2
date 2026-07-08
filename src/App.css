@@ -43,7 +43,6 @@
   font-size: 0.95rem;
   color: #3b2410;
   outline: none;
-  transition: border-color 0.15s ease;
 }
 
 .search-bar input:focus {
@@ -69,26 +68,8 @@
   background-color: #ffffff;
   cursor: pointer;
   outline: none;
-  transition: border-color 0.15s ease;
 }
 
 .search-bar select:focus {
   border-color: #f6c945;
-}
-
-.search-bar button {
-  padding: 10px 22px;
-  border: none;
-  border-radius: 6px;
-  background-color: #c9711e;
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-}
-
-.search-bar button:hover {
-  background-color: #f6c945;
-  color: #3b2410;
 }

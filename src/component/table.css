@@ -1,4 +1,3 @@
-/* Beer-themed palette */
 :root {
   --cream: #f8ecd4;
   --cream-row: #fff8ea;
@@ -23,7 +22,6 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-/* Yellow rounded header */
 .brewery-table thead th {
   text-align: left;
   padding: 14px 16px;
@@ -43,7 +41,6 @@
   border-top-right-radius: 16px;
 }
 
-/* White rows */
 .brewery-row {
   background-color: #ffffff;
 }
@@ -62,7 +59,6 @@
   font-size: 1rem;
 }
 
-/* Rounded colored type tag */
 .type-tag {
   display: inline-block;
   padding: 4px 12px;
@@ -86,7 +82,6 @@
 .type-proprietor { background-color: #ddb892; }
 .type-closed { background-color: #b0a89a; color: #fff; }
 
-/* Website button */
 .website-button {
   display: inline-block;
   padding: 6px 16px;
@@ -96,46 +91,9 @@
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
-  transition: background-color 0.15s ease;
 }
 
 .website-button:hover {
   background-color: var(--yellow);
   color: var(--dark-roast);
-}
-
-/* Responsive: stack into cards on mobile */
-@media (max-width: 640px) {
-  .brewery-table thead {
-    display: none;
-  }
-
-  .brewery-table,
-  .brewery-table tbody,
-  .brewery-row,
-  .brewery-row td {
-    display: block;
-    width: 100%;
-  }
-
-  .brewery-row {
-    padding: 6px 4px;
-  }
-
-  .brewery-row td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 16px;
-  }
-
-  .brewery-row td::before {
-    content: attr(data-label);
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--caramel);
-  }
 }
