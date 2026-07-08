@@ -29,7 +29,7 @@ function Table({ breweries = [] }) {
                 {[brewery.city, brewery.state].filter(Boolean).join(' / ')}
               </td>
               <td data-label="Phone">
-                {brewery.phone ? formatPhone(brewery.phone) : '—'}
+                {brewery.phone ? brewery.phone : '—'}
               </td>
               <td data-label="Website">
                 {brewery.website_url ? (
@@ -51,14 +51,6 @@ function Table({ breweries = [] }) {
       </table>
     </div>
   )
-}
-
-function formatPhone(phone) {
-  const digits = phone.replace(/\D/g, '')
-  if (digits.length === 10) {
-    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
-  }
-  return phone
 }
 
 export default Table
