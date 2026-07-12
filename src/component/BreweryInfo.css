@@ -22,6 +22,16 @@
   font-weight: 400;
 }
 
+.brewery-info-table a:link {
+  color: #f6c945;
+  font-weight: 600;
+}
+
+.brewery-info-table a:visited {
+  color: #ff8c1a;
+  font-weight: 600;
+}
+
 .breweryName {
   display:flex;
   align-items: center;
