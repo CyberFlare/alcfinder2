@@ -1,0 +1,30 @@
+.brewery-info-table {
+  border-collapse: collapse;
+  background: none;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.brewery-info-table th,
+.brewery-info-table td {
+  background: none;
+  border: 1px solid currentColor;
+  padding: 6px 16px;
+  vertical-align: top;
+}
+
+.brewery-info-table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.brewery-info-table td {
+  font-weight: 400;
+}
+
+.breweryName {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+}

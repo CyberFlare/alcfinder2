@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import './table.css'
 
 function Table({ breweries = [] }) {
@@ -12,6 +13,7 @@ function Table({ breweries = [] }) {
             <th>Location</th>
             <th>Phone</th>
             <th>Website</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>
@@ -43,6 +45,11 @@ function Table({ breweries = [] }) {
                 ) : (
                   'n/a'
                 )}
+              </td>
+              <td>
+                <Link className="details-button" to={`/details/${brewery.id}`}>
+                  Details
+                </Link>
               </td>
             </tr>
           ))}

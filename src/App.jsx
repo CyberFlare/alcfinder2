@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import Header from './component/Header'
 import SummaryCard from './component/SummaryCard'
 import Table from './component/table'
+import BarGraph from './component/BarGraph'
+import PieChart from './component/PieChart'
 
 const url = 'https://api.openbrewerydb.org/v1/breweries?by_country=united_states&per_page=200'
 
@@ -82,10 +85,7 @@ function App() {
 
   return (
     <>
-      <div className="header">
-        <h1>AlcFinder2</h1>
-        <p>Find the nearest breweries near you! #2 cuz i lost my project data TWICE!</p>
-      </div>
+      <Header />
       <div className="summary-cards">
         <SummaryCard
           data={totalBreweries}
@@ -132,7 +132,13 @@ function App() {
           <option value="closed">Closed</option>
         </select>
       </div>
-      <Table breweries={filteredBreweries} />
+      <div className="data">
+        <Table breweries={filteredBreweries} />
+        <div className="chart-container">
+          <BarGraph data={filteredBreweries} />
+          <PieChart data={filteredBreweries}/>
+        </div>
+      </div>
     </>
   )
 }
