@@ -34,7 +34,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif
@@ -43,13 +43,15 @@ GIF created with ScreenToGif
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
-## Notes
 
-Describe any challenges encountered while building the app.
+## Built with
+- React
+- React Router
+- Recharts
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2026 Darren Lee
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
